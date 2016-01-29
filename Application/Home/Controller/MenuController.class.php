@@ -11,6 +11,10 @@ use Think\Controller;
 
 class MenuController extends  Controller
 {
+    public function menu(){
+        $this->display();
+    }
+
     public function  menulist(){
         if($_SESSION["user"]["name"]==""||$_SESSION["user"]["name"]==null){
             //dump($_SESSION["user"]["name"]);

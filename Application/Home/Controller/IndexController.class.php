@@ -7,6 +7,7 @@ class IndexController extends Controller {
             //dump($_SESSION["user"]["name"]);
             $this->redirect("Home/Login/login");
         }else{
+            layout('Layout/layout');
             $this->display();
         }
     }
