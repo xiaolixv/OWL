@@ -1,0 +1,373 @@
+[ 2016-01-29T21:42:16+08:00 ] ::1 /owl/index.php/Home/Index/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000846s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001024s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001099s ]
+NOTIC: [8] Object of class Redis could not be converted to int /var/www/html/owl/ThinkPHP/Common/functions.php 第 1263 行.
+NOTIC: [8] Undefined index: user /var/www/html/owl/Application/Home/Controller/IndexController.class.php 第 6 行.
+
+[ 2016-01-29T21:42:16+08:00 ] ::1 /owl/index.php/Home/Login/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000101s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000044s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000098s ]
+NOTIC: [8] Object of class Redis could not be converted to int /var/www/html/owl/ThinkPHP/Common/functions.php 第 1263 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000078s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000214s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.016605s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.016691s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000435s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000495s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001071s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001132s ]
+
+[ 2016-01-29T21:42:16+08:00 ] ::1 /owl/index.php/Home/Login/js/bootstrap.min.js
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000197s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000084s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000165s ]
+NOTIC: [8] Object of class Redis could not be converted to int /var/www/html/owl/ThinkPHP/Common/functions.php 第 1263 行.
+ERR: 非法操作:js
+
+[ 2016-01-29T21:42:16+08:00 ] ::1 /owl/index.php/Home/Login/js/jquery.js
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000150s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000064s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000131s ]
+NOTIC: [8] Object of class Redis could not be converted to int /var/www/html/owl/ThinkPHP/Common/functions.php 第 1263 行.
+ERR: 非法操作:js
+
+[ 2016-01-29T21:42:17+08:00 ] ::1 /owl/index.php/Home/Login/img/favicon.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000169s ]
+
+[ 2016-01-29T21:42:22+08:00 ] ::1 /owl/index.php/Home/Login/checkLogin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000164s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000076s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000145s ]
+NOTIC: [8] Object of class Redis could not be converted to int /var/www/html/owl/ThinkPHP/Common/functions.php 第 1263 行.
+NOTIC: [2048] Declaration of Think\Model\MongoModel::setInc() should be compatible with Think\Model::setInc($field, $step = 1, $lazyTime = 0) /var/www/html/owl/ThinkPHP/Library/Think/Model/MongoModel.class.php 第 17 行.
+NOTIC: [2048] Declaration of Think\Model\MongoModel::setDec() should be compatible with Think\Model::setDec($field, $step = 1, $lazyTime = 0) /var/www/html/owl/ThinkPHP/Library/Think/Model/MongoModel.class.php 第 17 行.
+NOTIC: [2048] Declaration of Think\Db\Driver\Mongo::connect() should be compatible with Think\Db\Driver::connect($config = '', $linkNum = 0, $autoConnection = false) /var/www/html/owl/ThinkPHP/Library/Think/Db/Driver/Mongo.class.php 第 18 行.
+NOTIC: [2048] Declaration of Think\Db\Driver\Mongo::insertAll() should be compatible with Think\Db\Driver::insertAll($dataSet, $options = Array, $replace = false) /var/www/html/owl/ThinkPHP/Library/Think/Db/Driver/Mongo.class.php 第 18 行.
+SQL: local.getCollection(user) [ RunTime:0.0000s ]
+SQL: local.user.find({"username":"lixu","password":"e10adc3949ba59abbe56e057f20f883e"}).limit(1) [ RunTime:0.0000s ]
+
+[ 2016-01-29T21:42:22+08:00 ] ::1 /owl/index.php/Home/Login/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000103s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000045s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000099s ]
+NOTIC: [8] Object of class Redis could not be converted to int /var/www/html/owl/ThinkPHP/Common/functions.php 第 1263 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000091s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000154s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.003419s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.003509s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000080s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000130s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000081s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000135s ]
+
+[ 2016-01-29T21:42:22+08:00 ] ::1 /owl/index.php/Home/Login/js/jquery.js
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000131s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000056s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000122s ]
+NOTIC: [8] Object of class Redis could not be converted to int /var/www/html/owl/ThinkPHP/Common/functions.php 第 1263 行.
+ERR: 非法操作:js
+
+[ 2016-01-29T21:42:22+08:00 ] ::1 /owl/index.php/Home/Login/js/bootstrap.min.js
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000144s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000061s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000117s ]
+NOTIC: [8] Object of class Redis could not be converted to int /var/www/html/owl/ThinkPHP/Common/functions.php 第 1263 行.
+ERR: 非法操作:js
+
+[ 2016-01-29T21:42:26+08:00 ] ::1 /owl/index.php/Home/Login/registration
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000162s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000084s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000169s ]
+NOTIC: [8] Object of class Redis could not be converted to int /var/www/html/owl/ThinkPHP/Common/functions.php 第 1263 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000070s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000150s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.003305s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.003379s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000073s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000158s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000058s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000112s ]
+
+[ 2016-01-29T21:42:42+08:00 ] ::1 /owl/index.php/Home/Login/registerUser
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000124s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000070s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000134s ]
+NOTIC: [8] Object of class Redis could not be converted to int /var/www/html/owl/ThinkPHP/Common/functions.php 第 1263 行.
+NOTIC: [2048] Declaration of Think\Model\MongoModel::setInc() should be compatible with Think\Model::setInc($field, $step = 1, $lazyTime = 0) /var/www/html/owl/ThinkPHP/Library/Think/Model/MongoModel.class.php 第 17 行.
+NOTIC: [2048] Declaration of Think\Model\MongoModel::setDec() should be compatible with Think\Model::setDec($field, $step = 1, $lazyTime = 0) /var/www/html/owl/ThinkPHP/Library/Think/Model/MongoModel.class.php 第 17 行.
+NOTIC: [2048] Declaration of Think\Db\Driver\Mongo::connect() should be compatible with Think\Db\Driver::connect($config = '', $linkNum = 0, $autoConnection = false) /var/www/html/owl/ThinkPHP/Library/Think/Db/Driver/Mongo.class.php 第 18 行.
+NOTIC: [2048] Declaration of Think\Db\Driver\Mongo::insertAll() should be compatible with Think\Db\Driver::insertAll($dataSet, $options = Array, $replace = false) /var/www/html/owl/ThinkPHP/Library/Think/Db/Driver/Mongo.class.php 第 18 行.
+SQL: local.getCollection(user) [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: validate /var/www/html/owl/ThinkPHP/Library/Think/Model.class.php 第 1185 行.
+NOTIC: [8] Undefined index: auto /var/www/html/owl/ThinkPHP/Library/Think/Model.class.php 第 1128 行.
+SQL: local.user.insert({"username":"felix","email":"123456","password":"e10adc3949ba59abbe56e057f20f883e"}) [ RunTime:0.0013s ]
+
+[ 2016-01-29T21:42:42+08:00 ] ::1 /owl/index.php/Home/Login/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000103s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000045s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000099s ]
+NOTIC: [8] Object of class Redis could not be converted to int /var/www/html/owl/ThinkPHP/Common/functions.php 第 1263 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000067s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000152s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.003490s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.003555s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000070s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000121s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000061s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000113s ]
+
+[ 2016-01-29T21:42:42+08:00 ] ::1 /owl/index.php/Home/Login/js/jquery.js
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000126s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000063s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000134s ]
+NOTIC: [8] Object of class Redis could not be converted to int /var/www/html/owl/ThinkPHP/Common/functions.php 第 1263 行.
+ERR: 非法操作:js
+
+[ 2016-01-29T21:42:42+08:00 ] ::1 /owl/index.php/Home/Login/js/bootstrap.min.js
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000265s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000183s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000256s ]
+NOTIC: [8] Object of class Redis could not be converted to int /var/www/html/owl/ThinkPHP/Common/functions.php 第 1263 行.
+ERR: 非法操作:js
+
+[ 2016-01-29T21:43:07+08:00 ] ::1 /owl/index.php/Home/Login/checkLogin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000110s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000045s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000100s ]
+NOTIC: [8] Object of class Redis could not be converted to int /var/www/html/owl/ThinkPHP/Common/functions.php 第 1263 行.
+NOTIC: [2048] Declaration of Think\Model\MongoModel::setInc() should be compatible with Think\Model::setInc($field, $step = 1, $lazyTime = 0) /var/www/html/owl/ThinkPHP/Library/Think/Model/MongoModel.class.php 第 17 行.
+NOTIC: [2048] Declaration of Think\Model\MongoModel::setDec() should be compatible with Think\Model::setDec($field, $step = 1, $lazyTime = 0) /var/www/html/owl/ThinkPHP/Library/Think/Model/MongoModel.class.php 第 17 行.
+NOTIC: [2048] Declaration of Think\Db\Driver\Mongo::connect() should be compatible with Think\Db\Driver::connect($config = '', $linkNum = 0, $autoConnection = false) /var/www/html/owl/ThinkPHP/Library/Think/Db/Driver/Mongo.class.php 第 18 行.
+NOTIC: [2048] Declaration of Think\Db\Driver\Mongo::insertAll() should be compatible with Think\Db\Driver::insertAll($dataSet, $options = Array, $replace = false) /var/www/html/owl/ThinkPHP/Library/Think/Db/Driver/Mongo.class.php 第 18 行.
+SQL: local.getCollection(user) [ RunTime:0.0000s ]
+SQL: local.user.find({"username":"felix","password":"e10adc3949ba59abbe56e057f20f883e"}).limit(1) [ RunTime:0.0000s ]
+
+[ 2016-01-29T21:43:07+08:00 ] ::1 /owl/index.php/Home/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000103s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000049s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000105s ]
+NOTIC: [8] Object of class Redis could not be converted to int /var/www/html/owl/ThinkPHP/Common/functions.php 第 1263 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000308s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000405s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.024371s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.024440s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000063s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000113s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000113s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000213s ]
+
+[ 2016-01-29T21:43:07+08:00 ] ::1 /owl/index.php/Home/Index/js/jquery.dcjqaccordion.2.7.js
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000112s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000047s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000101s ]
+NOTIC: [8] Object of class Redis could not be converted to int /var/www/html/owl/ThinkPHP/Common/functions.php 第 1263 行.
+ERR: 非法操作:js
+
+[ 2016-01-29T21:43:07+08:00 ] ::1 /owl/index.php/Home/Index/img/avatar-mini.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000107s ]
+
+[ 2016-01-29T21:43:07+08:00 ] ::1 /owl/index.php/Home/Index/img/avatar-mini2.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000107s ]
+
+[ 2016-01-29T21:43:07+08:00 ] ::1 /owl/index.php/Home/Index/img/avatar-mini3.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000123s ]
+
+[ 2016-01-29T21:43:07+08:00 ] ::1 /owl/index.php/Home/Index/img/avatar-mini4.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000108s ]
+
+[ 2016-01-29T21:43:07+08:00 ] ::1 /owl/index.php/Home/Index/img/avatar1_small.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000119s ]
+
+[ 2016-01-29T21:43:07+08:00 ] ::1 /owl/index.php/Home/Index/img/sm-img-1.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000102s ]
+
+[ 2016-01-29T21:43:07+08:00 ] ::1 /owl/index.php/Home/Index/img/avatar1.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000134s ]
+
+[ 2016-01-29T21:43:07+08:00 ] ::1 /owl/index.php/Home/Index/img/sm-img-2.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000123s ]
+
+[ 2016-01-29T21:43:07+08:00 ] ::1 /owl/index.php/Home/Index/img/sm-img-3.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000115s ]
+
+[ 2016-01-29T21:43:07+08:00 ] ::1 /owl/index.php/Home/Index/img/ring.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000114s ]
+
+[ 2016-01-29T21:43:07+08:00 ] ::1 /owl/index.php/Home/Index/img/follower-avatar.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000109s ]
+
+[ 2016-01-29T21:43:08+08:00 ] ::1 /owl/index.php/Home/Index/img/favicon.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000116s ]
+
+[ 2016-01-29T21:43:11+08:00 ] ::1 /owl/index.php/Home/Role/rolelist.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000030s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000144s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000080s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000151s ]
+NOTIC: [8] Object of class Redis could not be converted to int /var/www/html/owl/ThinkPHP/Common/functions.php 第 1263 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000174s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000279s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.017668s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.017768s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000087s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000139s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000185s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000297s ]
+
+[ 2016-01-29T21:43:11+08:00 ] ::1 /owl/index.php/Home/Role/img/avatar-mini.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000129s ]
+
+[ 2016-01-29T21:43:11+08:00 ] ::1 /owl/index.php/Home/Role/img/avatar-mini2.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000109s ]
+
+[ 2016-01-29T21:43:11+08:00 ] ::1 /owl/index.php/Home/Role/img/avatar-mini3.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000108s ]
+
+[ 2016-01-29T21:43:11+08:00 ] ::1 /owl/index.php/Home/Role/img/avatar-mini4.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000117s ]
+
+[ 2016-01-29T21:43:11+08:00 ] ::1 /owl/index.php/Home/Role/img/avatar1_small.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000114s ]
+
+[ 2016-01-29T21:43:12+08:00 ] ::1 /owl/index.php/Home/Role/img/avatar-mini.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000115s ]
+
+[ 2016-01-29T21:43:12+08:00 ] ::1 /owl/index.php/Home/Role/img/avatar-mini2.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000111s ]
+
+[ 2016-01-29T21:43:12+08:00 ] ::1 /owl/index.php/Home/Role/img/avatar-mini3.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000110s ]
+
+[ 2016-01-29T21:43:12+08:00 ] ::1 /owl/index.php/Home/Role/img/avatar-mini4.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000120s ]
+
+[ 2016-01-29T21:43:12+08:00 ] ::1 /owl/index.php/Home/Role/img/avatar1_small.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000114s ]
+
+[ 2016-01-29T21:43:12+08:00 ] ::1 /owl/index.php/Home/Role/img/favicon.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000121s ]
+
