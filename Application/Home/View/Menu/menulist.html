@@ -1,4 +1,13 @@
 <link rel="stylesheet" type="text/css" href="__PUBLIC__/Content/css/zTreeStyle.css">
+<stylee>
+    .ztree li span.button.add {
+        margin-left:2px;
+        margin-right: -1px;
+        background-position:-144px 0;
+        vertical-align:top;
+        *vertical-align:middle
+    }
+</stylee>
 <section class="wrapper">
     <div class="row">
         <div class="col-lg-12">
@@ -18,14 +27,79 @@
     </div>
 </section>
 
+<!-- Modal -->
+<div class="modal fade" id="menuUpdate" tabindex="-1" role="dialog"  aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="myModalLabel">新增菜单</h4>
+            </div>
+            <div class="modal-body form-horizontal">
+                <div class="form-group">
+                    <label class="col-lg-2 col-sm-2 control-label">名  称</label>
+                    <div class="col-lg-10">
+                        <input type="text" class="form-control" id="menuname" placeholder="角色名称">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-lg-2 col-sm-2 control-label">描  述</label>
+                    <div class="col-lg-10">
+                        <textarea class="form-control" cols="60" rows="5"></textarea>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">关  闭</button>
+                <button type="button" class="btn btn-info" id="savemenu"><i class="icon-save"></i> 保  存</button>
+            </div>
+        </div>
+    </div>
+</div>
+
 <script src="__PUBLIC__/js/jquery.ztree.all-3.5.min.js"></script>
 <SCRIPT type="text/javascript" >
     <!--
     var setting = {
         view:{
             showLine : false,
-            showIcon:false
+            showIcon:false,
+            addHoverDom:addHoverDom,
+            removeHoverDom:removeHoverDom
+        },
+        edit:{
+            enable:true
+        },
+        callback:{
+            beforeEditName:beforeEditName,
+
         }
+
+    };
+
+    var menuModel={};
+
+    function removeHoverDom(treeId,treeNode){
+        $("#addBtn_"+treeNode.tId).unbind().remove();
+    }
+
+    var count=100;
+
+    function addHoverDom(treeId, treeNode) {
+        var sObj = $("#" + treeNode.tId + "_span");
+        if (treeNode.editNameFlag || $("#addBtn_"+treeNode.tId).length>0) return;
+        var addStr = "<span class='button ' id='addBtn_" + treeNode.tId
+                + "' title='add node' onfocus='this.blur();'></span>";
+        sObj.after(addStr);
+        var btn = $("#addBtn_"+treeNode.tId);
+        if (btn) btn.bind("click", function(){
+            menuModel.pId=treeNode.id;
+            menuModel.id=count++;
+            menuModel.treeNode=treeNode;
+            menuModel.isAdd=true;
+            $("#menuUpdate").modal('show');
+            return false;
+        });
     };
 
     var zNodes =[
@@ -77,6 +151,29 @@
 
     $(document).ready(function(){
         $.fn.zTree.init($("#treeDemo"), setting, zNodes);
+    });
+
+    function beforeEditName(treeid,treenode){
+        $("#menuUpdate").modal('show');
+        menuModel.updateTreeNode=treenode;
+        $("#menuname").val(treenode.name);
+        return false;
+    }
+
+    $("#savemenu").click(function(){
+        if(menuModel.isAdd) {
+            menuModel.name = $("#menuname").val();
+            menuModel.remark = $("#menuremark").val();
+            var zTree = $.fn.zTree.getZTreeObj("treeDemo");
+            zTree.addNodes(menuModel.treeNode, menuModel);
+        }else{
+            menuModel.updateTreeNode.name=$("#menuname").val();
+            menuModel.updateTreeNode.remark=$("menuremark").val();
+            var zTree = $.fn.zTree.getZTreeObj("treeDemo");
+            zTree.refresh();
+        }
+        menuModel = {};
+        $("#menuUpdate").modal('hide');
     });
 
     //-->
