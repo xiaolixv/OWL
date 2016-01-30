@@ -11,7 +11,7 @@ use Think\Controller;
 
 class ProjectController extends Controller
 {
-    public  function  menulist()
+    public  function  projectlist()
     {
         if ($_SESSION["user"]["name"] == "" || $_SESSION["user"]["name"] == null) {
             //dump($_SESSION["user"]["name"]);

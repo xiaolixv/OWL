@@ -49,6 +49,8 @@ website:	http://code.google.com/p/jquerytree/
 	display: inline-block;
 	border:1px solid #ccc !important;
 	width:90%;
+	line-height: 20px;
+	height: 24px;
 }
 .ztree li a:hover {
 	text-decoration:none;

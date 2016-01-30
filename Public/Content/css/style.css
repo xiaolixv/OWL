@@ -5,9 +5,6 @@ Author: Mosaddek Hossain
 Website: http://thevectorlab.net/
 */
 
-/* Import fonts */
-@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic);
-
 body {
     color: #797979;
     background: #f1f2f7;
@@ -188,8 +185,7 @@ a, a:hover, a:focus {
     height:17px;
     width:17px;
     display:inline-block;
-    background: url(../img/nav-expand.png) no-repeat top;
-    border-radius:3px;
+     border-radius:3px;
     -moz-border-radius:3px;
     -webkit-border-radius:3px;
     position:absolute;
@@ -197,7 +193,6 @@ a, a:hover, a:focus {
     top:15px;
 }
 .active .dcjq-icon {
-    background: url(../img/nav-expand.png) no-repeat bottom;
     border-radius:3px;
     -moz-border-radius:3px;
     -webkit-border-radius:3px;
@@ -426,7 +421,7 @@ ul.top-menu > li > a:hover, ul.top-menu > li > a:focus {
     /* Safari and Chrome */
     .dropdown-menu.extended  {
         box-shadow: 0 2px 8px rgba(0, 0, 0, 0.176) !important;
-    };
+    }
 }
 
 .dropdown-menu.extended li p {
@@ -621,7 +616,6 @@ ul.top-menu > li > a:hover, ul.top-menu > li > a:focus {
 }
 
 .log-arrow-up {
-    background: url("../img/arrow-up.png") no-repeat;
     width: 20px;
     height: 11px;
     position: absolute;
@@ -676,7 +670,6 @@ ul.top-menu > li > a:hover, ul.top-menu > li > a:focus {
     transition: all .3s ease;
     border: 1px solid #fff;
     box-shadow: none;
-    background: url("../img/search-icon.jpg") no-repeat 10px 8px;
     padding:0 5px 0 35px;
     color: #fff;
 }
@@ -766,7 +759,7 @@ ul.top-menu > li > a:hover, ul.top-menu > li > a:focus {
 }
 
 .state-overview .red {
-    background: #ff6c60;
+    background-color: #ff6c60;
 }
 
 .state-overview .yellow {
@@ -807,7 +800,7 @@ ul.top-menu > li > a:hover, ul.top-menu > li > a:focus {
     float: left;
     text-align: center;
     -webkit-border-radius: 5px 5px 0 0;
-    -moz-border-radius: 5px 5px 0 0x;
+    -moz-border-radius: 5px 5px 0 0px;
     border-radius: 5px 5px 0 0;
     z-index: 10;
 }
@@ -956,7 +949,6 @@ ul.top-menu > li > a:hover, ul.top-menu > li > a:focus {
 /**/
 
 .panel-body.chart-texture {
-    background: url("../img/chart-texture.jpg");
     -webkit-border-radius: 4px 4px 0px 0px;
     border-radius: 4px 4px 0px 0px;
 }
@@ -1389,7 +1381,7 @@ h3.timeline-title {
     /* Safari and Chrome */
     .panel-footer.revenue-foot {
         margin-bottom: -4px;
-    };
+    }
 }
 
 
@@ -1531,7 +1523,6 @@ ul.ft-link li a i {
 
 .owl-buttons .owl-prev {
     text-indent: -9999px;
-    background: url("../img/left-arrow.png") no-repeat;
     width: 6px;
     height: 10px;
     display: inline-block;
@@ -1539,7 +1530,6 @@ ul.ft-link li a i {
 
 .owl-buttons .owl-next {
     text-indent: -9999px;
-    background: url("../img/right-arrow.png") no-repeat;
     width: 6px;
     height: 10px;
     display: inline-block;
@@ -2203,7 +2193,6 @@ ul.inbox-pagination li {
 }
 
 .error-wrapper .icon-404{
-    background: url("../img/404_icon.png") no-repeat;
     width: 289px;
     height: 274px;
     display: inline-block;
@@ -2249,7 +2238,6 @@ ul.inbox-pagination li {
 }
 
 .error-wrapper .icon-500{
-    background: url("../img/500_icon.png") no-repeat;
     width: 289px;
     height: 274px;
     display: inline-block;
@@ -3175,8 +3163,6 @@ table.sliders tr td {
     position: relative;
     text-align: left;
     width: 80px;
-    -webkit-mask: url('../img/mask.png') 0 0 no-repeat;
-    mask: url('../img/mask.png') 0 0 no-repeat;
     -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
@@ -3282,8 +3268,6 @@ table.sliders tr td {
 .switch-square {
     border-radius: 6px;
     -webkit-border-radius: 6px;
-    -webkit-mask: url('../img/mask.png') 0 0 no-repeat;
-    mask: url('../img/mask.png') 0 0 no-repeat;
 }
 .switch-square > div.switch-off label {
     border-color: #7f8c9a;
@@ -3444,21 +3428,7 @@ table.sliders tr td {
     padding-left: 34px;
 }
 
-.has-js .label_radio {
-    background: url(../img/checkbox/radio-off.png) no-repeat;
-}
 
-.has-js .label_check {
-    background: url(../img/checkbox/check-off.png) no-repeat;
-}
-
-.has-js label.c_on {
-    background: url(../img/checkbox/check-on.png) no-repeat;
-}
-
-.has-js label.r_on {
-    background: url(../img/checkbox/radio-on.png) no-repeat;
-}
 
 .has-js .label_check input,
 .has-js .label_radio input {
@@ -3528,9 +3498,6 @@ table.sliders tr td {
 
 .cke_top, .cke_bottom {
     background: #F5F5F5 !important;
-    background: -moz-linear-gradient(center top , #F5F5F5, #F5F5F5) repeat scroll 0 0 #F5F5F5 !important;
-    background: -webkit-linear-gradient(center top , #F5F5F5, #F5F5F5) repeat scroll 0 0 #F5F5F5 !important;
-    background: -o-linear-gradient(center top , #F5F5F5, #F5F5F5) repeat scroll 0 0 #F5F5F5 !important;
     box-shadow: none;
     padding: 6px 8px 2px;
 }
@@ -3904,9 +3871,6 @@ span.customSelect {
 }
 span.customSelect.changed {
     background-color: #fff;
-}
-.customSelectInner {
-    background:url(../img/customSelect-arrow.gif) no-repeat center right;
 }
 
 /*boxed page */
@@ -4383,7 +4347,6 @@ tr.odd.gradeX td.sorting_1, tr.even.gradeX td.sorting_1, table.display tr.even.g
 /*lock screen*/
 
 .lock-screen {
-    background:#02bac6 url("../img/lock-bg.jpg");
     background-size: cover;
     background-repeat: repeat;
 }
@@ -4632,4 +4595,7 @@ tr.odd.gradeX td.sorting_1, tr.even.gradeX td.sorting_1, table.display tr.even.g
 
 .site-min-height {
     min-height: 900px;
+}
+.bg-success{
+    background-color: #78CD51;
 }
