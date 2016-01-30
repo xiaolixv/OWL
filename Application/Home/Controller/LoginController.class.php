@@ -24,7 +24,6 @@ class LoginController extends Controller
            $userInfo["name"]=$countUser["username"];
            $userInfo["email"]=$countUser["email"];
            $_SESSION["user"]=$userInfo;
-           S('data',3600,'1111');
            //$cache->set('people',array('name'=>'xiaobai','age'=>'23','gender'=>'wan'),12);
            $this->redirect("Home/Index/index");
        }else{
