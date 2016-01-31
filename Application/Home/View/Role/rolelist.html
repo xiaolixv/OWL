@@ -34,8 +34,8 @@
                         <table  class="table table-bordered table-striped table-condensed cf">
                             <thead class="cf">
                             <tr>
-                                <th class="text-center"  style="margin-top: 0px" width="20px">
-                                    <input type="checkbox" value="">
+                                <th class="text-center"  width="20px">
+                                    <input type="checkbox" style="margin-top: 0px" value="">
                                 </th>
                                 <th class="hidden">id</th>
                                 <th class="text-center">角色名称</th>
@@ -85,7 +85,7 @@
 <script type="text/html" id="grid">
     <tr>
         <td class="text-center" width="20px">
-            <input type="checkbox" value="">
+            <input type="checkbox" style="margin-top: 0px" value="">
         </td>
         <td class="hidden">${id}</td>
         <td>${name}</td>
@@ -94,6 +94,7 @@
 </script>
 <script type="text/javascript">
     var model={};
+
     $("#submit").click(function(){
         model.name=$("#rolename").val();
         model.describe=$("#describe").val();

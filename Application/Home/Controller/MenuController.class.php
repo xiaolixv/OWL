@@ -25,4 +25,41 @@ class MenuController extends  Controller
             $this->display();
         }
     }
+
+    public function AddMenu(){
+        $Model=D("Menu");
+        $Model->Create();
+        $Model->name=I("name");
+        $Model->remark=I("remark");
+        $Model->pId=I("pId");
+        $id=MD5(time());
+        $Model->id=$id;
+        $Model->add();
+        $this->ajaxReturn($id,'JSON');
+    }
+
+    public function UpdateMenu(){
+        $Model=D("Menu");
+        $Model->Create();
+        $Model->name=I("name");
+        $Model->remark=I("remark");
+        $Model->id=I("id");
+        $Model->pId=I("pId");
+        $Model->_id=I("_id");
+        $Model->save();
+    }
+
+    public function searchlist(){
+        $Model=D('Menu');
+        $result=$Model->where()->select();
+        $r=array();
+        $root["id"]="root";
+        $root["name"]="根目录";
+        $root["pid"]=null;
+        array_push($r,$root);
+        foreach($result as $id=>$value){
+            array_push($r,$value);
+        }
+        $this->ajaxReturn($r,'JSON');
+    }
 }

@@ -4597,5 +4597,21 @@ tr.odd.gradeX td.sorting_1, tr.even.gradeX td.sorting_1, table.display tr.even.g
     min-height: 900px;
 }
 .bg-success{
-    background-color: #78CD51;
+    background-color: #78CD51 !important;
+}
+
+.bg-warning{
+    background-color: #f1c500;
+}
+
+.bg-danger{
+    background-color: #ec6459;
+}
+
+.line12{
+    line-height: 12px;
+}
+
+.ml10{
+    margin-left: 10px !important;
 }
