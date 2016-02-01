@@ -11,13 +11,13 @@
     <title>用户登录</title>
 
     <!-- Bootstrap core CSS -->
-    <link href="/owl/Public/Content/css/bootstrap.min.css" rel="stylesheet">
-    <link href="/owl/Public/Content/css/bootstrap-reset.css" rel="stylesheet">
+    <link href="/OWLL/OWL/Public/Content/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/OWLL/OWL/Public/Content/css/bootstrap-reset.css" rel="stylesheet">
     <!--external css-->
-    <link href="/owl/Public/assets/font-awesome/css/font-awesome.css" rel="stylesheet" />
+    <link href="/OWLL/OWL/Public/assets/font-awesome/css/font-awesome.css" rel="stylesheet" />
     <!-- Custom styles for this template -->
-    <link href="/owl/Public/Content/css/style.css" rel="stylesheet">
-    <link href="/owl/Public/Content/css/style-responsive.css" rel="stylesheet" />
+    <link href="/OWLL/OWL/Public/Content/css/style.css" rel="stylesheet">
+    <link href="/OWLL/OWL/Public/Content/css/style-responsive.css" rel="stylesheet" />
 
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 tooltipss and media queries -->
     <!--[if lt IE 9]>
@@ -30,7 +30,7 @@
 
 <div class="container">
 
-    <form class="form-signin" action="/owl/index.php/Home/Login/checkLogin" method="post">
+    <form class="form-signin" action="/OWLL/OWL/index.php/Home/Login/checkLogin" method="post">
         <h2 class="form-signin-heading">立即登录</h2>
         <div class="login-wrap">
             <input type="text" class="form-control" required name="username" placeholder="用户名" autofocus>

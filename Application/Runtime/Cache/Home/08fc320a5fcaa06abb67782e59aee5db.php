@@ -11,51 +11,30 @@
     <title>主页</title>
 
     <!-- Bootstrap core CSS -->
-    <link href="/owl/Public/Content/css/bootstrap.min.css" rel="stylesheet">
-    <link href="/owl/Public/Content/css/bootstrap-reset.css" rel="stylesheet">
+    <link href="/OWLL/OWL/Public/Content/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/OWLL/OWL/Public/Content/css/bootstrap-reset.css" rel="stylesheet">
     <!--external css-->
-    <link href="/owl/Public/assets/font-awesome/css/font-awesome.css" rel="stylesheet" />
-    <link href="/owl/Public/assets/jquery-easy-pie-chart/jquery.easy-pie-chart.css" rel="stylesheet" type="text/css" media="screen"/>
-    <link rel="stylesheet" href="/owl/Public/Content/css/owl.carousel.css" type="text/css">
+    <link href="/OWLL/OWL/Public/assets/font-awesome/css/font-awesome.css" rel="stylesheet" />
     <!-- Custom styles for this template -->
-    <link href="/owl/Public/Content/css/style.css" rel="stylesheet">
-    <link href="/owl/Public/Content/css/style-responsive.css" rel="stylesheet" />
+    <link href="/OWLL/OWL/Public/Content/css/style.css" rel="stylesheet">
+    <link href="/OWLL/OWL/Public/Content/css/style-responsive.css" rel="stylesheet" />
 
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 tooltipss and media queries -->
     <!--[if lt IE 9]>
-    <script src="/owl/Public/js/html5shiv.js"></script>
-    <script src="/owl/Public/js/respond.min.js"></script>
+    <script src="/OWLL/OWL/Public/js/html5shiv.js"></script>
+    <script src="/OWLL/OWL/Public/js/respond.min.js"></script>
     <![endif]-->
 
 
     <!-- js placed at the end of the document so the pages load faster -->
-    <script src="/owl/Public/js/jquery-1.8.3.min.js"></script>
-    <script src="/owl/Public/js/bootstrap.min.js"></script>
-    <script class="include" type="text/javascript" src="/owl/Public/js/jquery.dcjqaccordion.2.7.js"></script>
-    <script src="/owl/Public/js/jquery.scrollTo.min.js"></script>
-    <script src="/owl/Public/js/jquery.nicescroll.js" type="text/javascript"></script>
-    <script src="/owl/Public/js/jquery.sparkline.js" type="text/javascript"></script>
-    <script src="/owl/Public/js/owl.carousel.js" ></script>
-    <script src="/owl/Public/js/jquery.customSelect.min.js" ></script>
-    <script src="/owl/Public/js/respond.min.js" ></script>
+    <script src="/OWLL/OWL/Public/js/jquery-1.8.3.min.js"></script>
+    <script src="/OWLL/OWL/Public/js/bootstrap.min.js"></script>
+    <script src="/OWLL/OWL/Public/js/jquery.cookie.js"></script>
+    <script class="include" src="/OWLL/OWL/Public/js/jquery.dcjqaccordion.2.7.min.js"></script>
+    <script src="/OWLL/OWL/Public/js/respond.min.js" ></script>
 
     <!--common script for all pages-->
-    <script src="/owl/Public/js/common-scripts.js"></script>
-    <style type="text/css">
-        .ztree{
-            width: 100%;
-        }
-        .ztree li a{
-            width: 100%;
-            display: block;
-            position: relative;
-            line-height: 20px!important;
-            height: 24px !important
-        }
-        .li[class~="important"] {
-            color: red;
-        }
-    </style>
+    <script src="/OWLL/OWL/Public/js/common-scripts.js"></script>
 </head>
 
 <body>
@@ -306,173 +285,53 @@
     <!--sidebar start-->
     <aside>
         <div id="sidebar"  class="nav-collapse ">
-            <!-- sidebar menu start-->
-            <ul class="sidebar-menu" id="nav-accordion">
-                <li>
-                    <a class="active" href="index.html">
-                        <i class="icon-dashboard"></i>
-                        <span>主页</span>
-                    </a>
-                </li>
+    <!-- sidebar menu start-->
+    <ul class="sidebar-menu" id="nav-accordion">
+        <li>
+            <a class="active" href="index.html">
+                <i class="icon-dashboard"></i>
+                <span>主页</span>
+            </a>
+        </li>
 
-                <li class="sub-menu">
-                    <a href="javascript:;" >
-                        <i class="icon-laptop"></i>
-                        <span>权限管理</span>
-                    </a>
-                    <ul class="sub">
-                        <li><a  href="../Role/rolelist.html">角色管理</a></li>
-                        <li><a  href="../Menu/menulist.html">菜单管理</a></li>
-                    </ul>
-                </li>
-
-                <li class="sub-menu">
-                    <a href="javascript:;" >
-                        <i class="icon-book"></i>
-                        <span>菜单管理</span>
-                    </a>
-                    <ul class="sub">
-                        <li><a  href="general.html">新增菜单</a></li>
-                        <li><a  href="buttons.html">配置菜单</a></li>
-                    </ul>
-                </li>
-
-                <li class="sub-menu">
-                    <a href="javascript:;" >
-                        <i class="icon-cogs"></i>
-                        <span>Components</span>
-                    </a>
-                    <ul class="sub">
-                        <li><a  href="grids.html">Grids</a></li>
-                        <li><a  href="calendar.html">Calendar</a></li>
-                        <li><a  href="gallery.html">Gallery</a></li>
-                        <li><a  href="todo_list.html">Todo List</a></li>
-                    </ul>
-                </li>
-                <li class="sub-menu">
-                    <a href="javascript:;" >
-                        <i class="icon-tasks"></i>
-                        <span>Form Stuff</span>
-                    </a>
-                    <ul class="sub">
-                        <li><a  href="form_component.html">Form Components</a></li>
-                        <li><a  href="advanced_form_components.html">Advanced Components</a></li>
-                        <li><a  href="form_wizard.html">Form Wizard</a></li>
-                        <li><a  href="form_validation.html">Form Validation</a></li>
-                        <li><a  href="dropzone.html">Dropzone File Upload</a></li>
-                        <li><a  href="inline_editor.html">Inline Editor</a></li>
-                        <li><a  href="image_cropping.html">Image Cropping</a></li>
-                    </ul>
-                </li>
-                <li class="sub-menu">
-                    <a href="javascript:;" >
-                        <i class="icon-th"></i>
-                        <span>Data Tables</span>
-                    </a>
-                    <ul class="sub">
-                        <li><a  href="basic_table.html">Basic Table</a></li>
-                        <li><a  href="responsive_table.html">Responsive Table</a></li>
-                        <li><a  href="dynamic_table.html">Dynamic Table</a></li>
-                        <li><a  href="advanced_table.html">Advanced Table</a></li>
-                        <li><a  href="editable_table.html">Editable Table</a></li>
-                    </ul>
-                </li>
-                <li>
-                    <a  href="inbox.html">
-                        <i class="icon-envelope"></i>
-                        <span>Mail </span>
-                        <span class="label label-danger pull-right mail-info">2</span>
-                    </a>
-                </li>
-                <li class="sub-menu">
-                    <a href="javascript:;" >
-                        <i class=" icon-bar-chart"></i>
-                        <span>Charts</span>
-                    </a>
-                    <ul class="sub">
-                        <li><a  href="morris.html">Morris</a></li>
-                        <li><a  href="chartjs.html">Chartjs</a></li>
-                        <li><a  href="flot_chart.html">Flot Charts</a></li>
-                        <li><a  href="xchart.html">xChart</a></li>
-                    </ul>
-                </li>
-                <li class="sub-menu">
-                    <a href="javascript:;" >
-                        <i class="icon-shopping-cart"></i>
-                        <span>Shop</span>
-                    </a>
-                    <ul class="sub">
-                        <li><a  href="product_list.html">List View</a></li>
-                        <li><a  href="product_details.html">Details View</a></li>
-                    </ul>
-                </li>
-                <li>
-                    <a href="google_maps.html" >
-                        <i class="icon-map-marker"></i>
-                        <span>Google Maps </span>
-                    </a>
-                </li>
-                <li class="sub-menu">
-                    <a href="javascript:;" >
-                        <i class="icon-glass"></i>
-                        <span>Extra</span>
-                    </a>
-                    <ul class="sub">
-                        <li><a  href="blank.html">Blank Page</a></li>
-                        <li><a  href="lock_screen.html">Lock Screen</a></li>
-                        <li><a  href="profile.html">Profile</a></li>
-                        <li><a  href="invoice.html">Invoice</a></li>
-                        <li><a  href="search_result.html">Search Result</a></li>
-                        <li><a  href="404.html">404 Error</a></li>
-                        <li><a  href="500.html">500 Error</a></li>
-                    </ul>
-                </li>
-                <li>
-                    <a  href="login.html">
-                        <i class="icon-user"></i>
-                        <span>Login Page</span>
-                    </a>
-                </li>
-
-                <!--multi level menu start-->
-                <li class="sub-menu">
-                    <a href="javascript:;" >
-                        <i class="icon-sitemap"></i>
-                        <span>Multi level Menu</span>
-                    </a>
-                    <ul class="sub">
-                        <li><a  href="javascript:;">Menu Item 1</a></li>
-                        <li class="sub-menu">
-                            <a  href="boxed_page.html">Menu Item 2</a>
-                            <ul class="sub">
-                                <li><a  href="javascript:;">Menu Item 2.1</a></li>
-                                <li class="sub-menu">
-                                    <a  href="javascript:;">Menu Item 3</a>
-                                    <ul class="sub">
-                                        <li><a  href="javascript:;">Menu Item 3.1</a></li>
-                                        <li><a  href="javascript:;">Menu Item 3.2</a></li>
-                                    </ul>
-                                </li>
-                            </ul>
-                        </li>
-                    </ul>
-                </li>
-                <!--multi level menu end-->
-
+        <li class="sub-menu">
+            <a href="javascript:;" >
+                <i class="icon-laptop"></i>
+                <span>权限管理</span>
+            </a>
+            <ul class="sub">
+                <li><a  href="../Role/rolelist.html">角色管理</a></li>
+                <li><a  href="../Menu/menulist.html">菜单管理</a></li>
             </ul>
-            <!-- sidebar menu end-->
-        </div>
+        </li>
+
+        <li class="sub-menu">
+            <a href="javascript:;" >
+                <i class="icon-book"></i>
+                <span>项目管理</span>
+            </a>
+            <ul class="sub">
+                <li><a  href="../Project/projectlist.html">项目管理</a></li>
+                <li><a  href="buttons.html">配置菜单</a></li>
+            </ul>
+        </li>
+
+        <!--multi level menu end-->
+
+    </ul>
+    <!-- sidebar menu end-->
+</div>
     </aside>
     <!--sidebar end-->
     <!--main content start-->
-    <section id="main-content">
-        <link rel="stylesheet" type="text/css" href="/owl/Public/Content/css/zTreeStyle.css">
+    <section id="main-content" style="min-height: 650px">
+        <link rel="stylesheet" type="text/css" href="/OWLL/OWL/Public/Content/css/zTreeStyle.css">
 <section class="wrapper">
     <div class="row">
         <div class="col-lg-12">
             <section class="panel">
                 <header class="panel-heading">
-                    Nestable List 3
+                    左侧菜单列表
                               <span class="tools pull-right">
                                 <a href="javascript:;" class="icon-chevron-down"></a>
                                 <a href="javascript:;" class="icon-remove"></a>
@@ -486,65 +345,160 @@
     </div>
 </section>
 
-<script src="/owl/Public/js/jquery.ztree.all-3.5.min.js"></script>
+<!-- Modal -->
+<div class="modal fade" id="menuUpdate" tabindex="-1" role="dialog"  aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="myModalLabel">新增菜单</h4>
+            </div>
+            <div class="modal-body form-horizontal">
+                <div class="form-group">
+                    <label class="col-lg-2 col-sm-2 control-label">名  称</label>
+                    <div class="col-lg-10">
+                        <input type="text" class="form-control" id="menuname" placeholder="角色名称">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-lg-2 col-sm-2 control-label">描  述</label>
+                    <div class="col-lg-10">
+                        <textarea class="form-control" id="menuremark" cols="60" rows="5"></textarea>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">关  闭</button>
+                <button type="button" class="btn btn-info" id="savemenu"><i class="icon-save"></i> 保  存</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="/OWLL/OWL/Public/js/jquery.ztree.all-3.5.min.js"></script>
 <SCRIPT type="text/javascript" >
+
     <!--
     var setting = {
         view:{
             showLine : false,
-            showIcon:false
+            showIcon:false,
+            addHoverDom:addHoverDom,
+            removeHoverDom:removeHoverDom,
+            txtSelectedEnable: false
+        },
+        edit:{
+            enable:true
+        },
+        callback:{
+            beforeEditName:beforeEditName,
+
+        },
+        data: {
+            simpleData: {
+                enable: true
+            }
         }
+
     };
 
-    var zNodes =[
-        { name:"父节点1 - 展开", open:true,
-            children: [
-                { name:"父节点11 - 折叠",
-                    children: [
-                        { name:"叶子节点111"},
-                        { name:"叶子节点112"},
-                        { name:"叶子节点113"},
-                        { name:"叶子节点114"}
-                    ]},
-                { name:"父节点12 - 折叠",
-                    children: [
-                        { name:"叶子节点121"},
-                        { name:"叶子节点122"},
-                        { name:"叶子节点123"},
-                        { name:"叶子节点124"}
-                    ]},
-                { name:"父节点13 - 没有子节点", isParent:true}
-            ]},
-        { name:"父节点2 - 折叠",
-            children: [
-                { name:"父节点21 - 展开", open:true,
-                    children: [
-                        { name:"叶子节点211"},
-                        { name:"叶子节点212"},
-                        { name:"叶子节点213"},
-                        { name:"叶子节点214"}
-                    ]},
-                { name:"父节点22 - 折叠",
-                    children: [
-                        { name:"叶子节点221"},
-                        { name:"叶子节点222"},
-                        { name:"叶子节点223"},
-                        { name:"叶子节点224"}
-                    ]},
-                { name:"父节点23 - 折叠",
-                    children: [
-                        { name:"叶子节点231"},
-                        { name:"叶子节点232"},
-                        { name:"叶子节点233"},
-                        { name:"叶子节点234"}
-                    ]}
-            ]},
-        { name:"父节点3 - 没有子节点", isParent:true}
+    var menuModel={};
+    var parentNode={};
 
-    ];
+    function removeHoverDom(treeId,treeNode){
+        $("#addBtn_"+treeNode.tId).unbind().remove();
+    }
+
+    var count=100;
+
+    function cleardialog(){
+        $("#menuname").val("");
+        $("#menuremark").val("");
+    }
+
+    function addHoverDom(treeId, treeNode) {
+        var sObj = $("#" + treeNode.tId + "_span");
+        if (treeNode.editNameFlag || $("#addBtn_"+treeNode.tId).length>0) return;
+        var addStr = "<button class='btn bg-success btn-xs line12' style='margin-left: 10px' id='addBtn_" + treeNode.tId + "' " +
+                " onfocus='this.blur();'><i class='icon-plus'></i>新 增</button>";
+        sObj.after(addStr);
+        var btn = $("#addBtn_"+treeNode.tId);
+        if (btn) btn.bind("click", function(){
+            menuModel.pId=treeNode.id;
+            parentNode={};
+            parentNode=treeNode;
+            menuModel.isAdd=true;
+            cleardialog();
+            $('#menuUpdate').modal({
+                backdrop: 'static'
+            })
+            $("#menuUpdate").modal('show');
+            return false;
+        });
+    };
 
     $(document).ready(function(){
-        $.fn.zTree.init($("#treeDemo"), setting, zNodes);
+        $.ajax({
+            type:"GET",
+            dataType:'json',
+            url:"./searchlist",
+            success:function(data){
+                $.fn.zTree.init($("#treeDemo"), setting, data);
+            }
+        });
+    });
+
+    function beforeEditName(treeid,treenode){
+        cleardialog();
+        $('#menuUpdate').modal({
+            backdrop: 'static'
+        })
+        $("#menuUpdate").modal('show');
+        menuModel.updateTreeNode=treenode;
+        $("#menuname").val(treenode.name);
+        $("#menuremark").val(treenode.remark);
+        return false;
+    }
+
+    $("#savemenu").click(function(){
+        if(menuModel.isAdd) {
+            menuModel.name = $("#menuname").val();
+            menuModel.remark = $("#menuremark").val();
+            $.ajax({
+                type: 'POST',
+                dataType:'json',
+                url: "/OWLL/OWL/index.php/Home/Menu/AddMenu",
+                data: menuModel,
+                success:function(data){
+                    menuModel.id=data.id;
+                    var zTree = $.fn.zTree.getZTreeObj("treeDemo");
+                    zTree.addNodes(parentNode, menuModel);
+                    menuModel = {};
+                }
+            });
+
+        }else{
+            menuModel.updateTreeNode.name=$("#menuname").val();
+            menuModel.updateTreeNode.remark=$("#menuremark").val();
+            var m={};
+            m._id=menuModel.updateTreeNode._id;
+            m.id=menuModel.updateTreeNode.id;
+            m.pId=menuModel.updateTreeNode.pId;
+            m.name=menuModel.updateTreeNode.name;
+            m.remark=menuModel.updateTreeNode.remark;
+            $.ajax({
+                type: 'POST',
+                dataType:'json',
+                url: "/OWLL/OWL/index.php/Home/Menu/UpdateMenu",
+                data: m,
+                success:function(data){
+                    var zTree = $.fn.zTree.getZTreeObj("treeDemo");
+                    zTree.refresh();
+                    menuModel = {};
+                }
+            });
+        }
+        $("#menuUpdate").modal('hide');
     });
 
     //-->
@@ -562,26 +516,5 @@
     </footer>
     <!--footer end-->
 </section>
-
-
-
-
-
-<script>
-
-    //owl carousel
-
-    $(document).ready(function() {
-        $("#owl-demo").owlCarousel({
-            navigation : true,
-            slideSpeed : 300,
-            paginationSpeed : 400,
-            singleItem : true,
-            autoPlay:true
-
-        });
-    });
-
-  </script>
 </body>
 </html>
