@@ -336,11 +336,11 @@
                     <div class="form-horizontal col-lg-8">
                         <label class="col-lg-2 col-sm-2 control-label">名  称</label>
                         <div class="col-lg-10">
-                            <input type="text" class="form-control col-sm-6" style="width:50% !important" id="searchname" placeholder="角色名称">
+                            <input type="text" class="form-control col-sm-6" style="width:50% !important" id="searchname" placeholder="项目名称">
                         </div>
                     </div>
                     <div class="col-lg-4">
-                        <button type="button" class="btn btn-primary "><i class=" icon-search"></i>查  找</button>
+                        <button type="button" class="btn btn-primary " id="find" ><i class=" icon-search"></i>查  找</button>
                         <button type="button" data-backdrop="static" data-toggle="modal" data-target="#myModal" class="btn btn-success "><i class=" icon-plus"></i> 新 增</button>
                         <button type="button" class="btn btn-danger "><i class=" icon-remove"></i> 删 除</button>
                         <button type="button" class="btn btn-info "><i class=" icon-user"></i> 设置人员</button>
@@ -353,42 +353,22 @@
         <div class="col-lg-12">
             <section class="panel">
                 <header class="panel-heading">
-                    角色列表
+                    项目列表
                 </header>
                 <div class="panel-body">
                     <section id="no-more-tables">
-                        <table class="table table-bordered table-striped table-condensed cf">
+                        <table  class="table table-bordered table-striped table-condensed cf">
                             <thead class="cf">
                             <tr>
-                                <th class="text-center paddingNone" style="margin-top: 0px" width="20px">
-                                    <input type="checkbox" value="">
+                                <th class="text-center"  width="20px">
+                                    <input type="checkbox" style="margin-top: 0px" value="">
                                 </th>
-                                <th>Code</th>
-                                <th>Company</th>
-                                <th class="numeric">Price</th>
-                                <th class="numeric">Change</th>
-                                <th class="numeric">Change %</th>
-                                <th class="numeric">Open</th>
-                                <th class="numeric">High</th>
-                                <th class="numeric">Low</th>
-                                <th class="numeric">Volume</th>
+                                <th class="hidden">id</th>
+                                <th class="text-center">项目名称</th>
+                                <th class="text-center">项目描述</th>
                             </tr>
                             </thead>
-                            <tbody>
-                            <tr>
-                                <td class="text-center" style="margin-top: 0px" width="20px">
-                                    <input type="checkbox" value="">
-                                </td>
-                                <td data-title="Code">AAC</td>
-                                <td data-title="Company">AUSTRALIAN AGRICULTURAL COMPANY LIMITED.</td>
-                                <td class="numeric" data-title="Price">$1.38</td>
-                                <td class="numeric" data-title="Change">-0.01</td>
-                                <td class="numeric" data-title="Change %">-0.36%</td>
-                                <td class="numeric" data-title="Open">$1.39</td>
-                                <td class="numeric" data-title="High">$1.39</td>
-                                <td class="numeric" data-title="Low">$1.38</td>
-                                <td class="numeric" data-title="Volume">9,395</td>
-                            </tr>
+                            <tbody id="projecttable">
                             </tbody>
                         </table>
                     </section>
@@ -404,29 +384,73 @@
         <div class="modal-content">
             <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                <h4 class="modal-title" id="myModalLabel">新增角色</h4>
+                <h4 class="modal-title" id="myModalLabel">新增项目</h4>
             </div>
             <div class="modal-body form-horizontal">
                 <div class="form-group">
-                    <label class="col-lg-2 col-sm-2 control-label">名称</label>
+                    <label class="col-lg-2 col-sm-2 control-label">项目名称</label>
                     <div class="col-lg-10">
-                        <input type="text" class="form-control" id="rolename" placeholder="角色名称">
+                        <input type="text" class="form-control" id="rolename" placeholder="项目名称">
                     </div>
                 </div>
                 <div class="form-group">
-                    <label class="col-lg-2 col-sm-2 control-label">角色描述</label>
+                    <label class="col-lg-2 col-sm-2 control-label">项目描述</label>
                     <div class="col-lg-10">
-                        <textarea class="form-control" cols="60" rows="5"></textarea>
+                        <textarea class="form-control" id="describe" cols="60" rows="5"></textarea>
                     </div>
                 </div>
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-default" data-dismiss="modal">关  闭</button>
-                <button type="button" class="btn btn-info"><i class="icon-save"></i> 保  存</button>
+                <button type="button" class="btn btn-info" id="submit"><i class="icon-save"></i> 保  存</button>
             </div>
         </div>
     </div>
 </div>
+<script src="/OWLL/OWL/Public/js/jquery.tmpl.min.js" type="text/javascript"></script>
+<script type="text/html" id="grid">
+    <tr>
+        <td class="text-center" width="20px">
+            <input type="checkbox" style="margin-top: 0px" value="">
+        </td>
+        <td class="hidden">${id}</td>
+        <td>${name}</td>
+        <td>${describe}</td>
+    </tr>
+</script>
+<script type="text/javascript">
+    var model={};
+
+    $("#submit").click(function(){
+        model.name=$("#rolename").val();
+        model.describe=$("#describe").val();
+        $.ajax({
+            type: 'POST',
+            dataType:'json',
+            url: "/OWLL/OWL/index.php/Home/Project/AddProject",
+            data: model,
+            success:function(data){
+                model={};
+                $("#myModal").modal("hide");
+            }
+
+        });
+    });
+    $("#find").click(function(){
+        var searchModel={};
+        searchModel.name=$("#searchname").val();
+        $.ajax({
+            type:"GET",
+            dataType:'json',
+            data:searchModel,
+            url:"./SearchProject",
+            success:function(data){
+                $("#projecttable").html("");
+                $('#grid').tmpl(data).appendTo('#projecttable');
+            }
+        });
+    });
+</script>
 
 
     </section>

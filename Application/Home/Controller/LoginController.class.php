@@ -23,6 +23,7 @@ class LoginController extends Controller
        if(count($countUser)>0){
            $userInfo["name"]=$countUser["username"];
            $userInfo["email"]=$countUser["email"];
+           $userInfo["id"]=$countUser["_id"];
            $_SESSION["user"]=$userInfo;
            //$cache->set('people',array('name'=>'xiaobai','age'=>'23','gender'=>'wan'),12);
            $this->redirect("Home/Index/index");

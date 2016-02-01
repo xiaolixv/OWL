@@ -29,9 +29,6 @@ class MenuController extends  Controller
     public function AddMenu(){
         $Model=D("Menu");
         $Model->Create();
-        $Model->name=I("name");
-        $Model->remark=I("remark");
-        $Model->pId=I("pId");
         $id=MD5(time());
         $Model->id=$id;
         $Model->add();
@@ -41,11 +38,6 @@ class MenuController extends  Controller
     public function UpdateMenu(){
         $Model=D("Menu");
         $Model->Create();
-        $Model->name=I("name");
-        $Model->remark=I("remark");
-        $Model->id=I("id");
-        $Model->pId=I("pId");
-        $Model->_id=I("_id");
         $Model->save();
     }
 

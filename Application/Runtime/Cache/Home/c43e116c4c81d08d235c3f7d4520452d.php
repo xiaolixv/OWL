@@ -333,18 +333,18 @@
                     <label class="panel-title">查询条件</label>
                 </header>
                     <div class="row panel-body ">
-                        <div class="form-horizontal col-lg-6">
+                        <div class="form-horizontal col-lg-7">
                             <label class="col-lg-2 col-sm-2 control-label">名  称</label>
                             <div class="col-lg-10">
                                 <input type="text" class="form-control col-sm-6" style="width:50% !important" id="searchname" placeholder="角色名称">
                             </div>
                         </div>
-                        <div class="col-lg-6 ">
+                        <div class="col-lg-5">
                             <button type="button" id="find" class="btn btn-primary "><i class=" icon-search"></i>查  找</button>
-                            &nbsp;&nbsp;<button type="button" data-backdrop="static" data-toggle="modal" data-target="#myModal" class="btn btn-success "><i class=" icon-plus"></i> 新 增</button>
-                            &nbsp;&nbsp;<button type="button" class="btn btn-danger "><i class=" icon-remove"></i> 删 除</button>
-                            &nbsp;&nbsp;<button type="button" class="btn btn-info "><i class=" icon-user"></i> 设置人员</button>
-                            &nbsp;&nbsp;<button type="button" class="btn btn-warning "><i class="icon-list"></i> 设置菜单</button>
+                            <button type="button" data-backdrop="static" data-toggle="modal" data-target="#myModal" class="btn btn-success "><i class=" icon-plus"></i> 新 增</button>
+                            <button type="button" class="btn btn-danger "><i class=" icon-remove"></i> 删 除</button>
+                            <button type="button" class="btn btn-info "><i class=" icon-user"></i> 设置人员</button>
+                            <button type="button" class="btn btn-warning "><i class="icon-list"></i> 设置菜单</button>
                         </div>
                      </div>
             </section>

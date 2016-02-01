@@ -30,7 +30,13 @@
                 <div class="form-group">
                     <label class="col-lg-2 col-sm-2 control-label">名  称</label>
                     <div class="col-lg-10">
-                        <input type="text" class="form-control" id="menuname" placeholder="角色名称">
+                        <input type="text" class="form-control" id="menuname" placeholder="左侧菜单名称">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-lg-2 col-sm-2 control-label">URL</label>
+                    <div class="col-lg-10">
+                        <input type="text" class="form-control" id="url" placeholder="左侧菜单URL">
                     </div>
                 </div>
                 <div class="form-group">
@@ -137,6 +143,7 @@
         if(menuModel.isAdd) {
             menuModel.name = $("#menuname").val();
             menuModel.remark = $("#menuremark").val();
+            menuModel.url=$("#url").val();
             $.ajax({
                 type: 'POST',
                 dataType:'json',
@@ -153,11 +160,13 @@
         }else{
             menuModel.updateTreeNode.name=$("#menuname").val();
             menuModel.updateTreeNode.remark=$("#menuremark").val();
+            menuModel.updateTreeNode.url=$("#url").val();
             var m={};
             m._id=menuModel.updateTreeNode._id;
             m.id=menuModel.updateTreeNode.id;
             m.pId=menuModel.updateTreeNode.pId;
             m.name=menuModel.updateTreeNode.name;
+            m.url=menuModel.updateTreeNode.url;
             m.remark=menuModel.updateTreeNode.remark;
             $.ajax({
                 type: 'POST',
