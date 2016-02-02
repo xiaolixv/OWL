@@ -16,14 +16,8 @@ class MenuController extends  Controller
     }
 
     public function  menulist(){
-        if($_SESSION["user"]["name"]==""||$_SESSION["user"]["name"]==null){
-            //dump($_SESSION["user"]["name"]);
-            $this->redirect("Home/Login/login");
-        }else{
-
-            layout('Layout/layout');
-            $this->display();
-        }
+        layout('Layout/layout');
+        $this->display();
     }
 
     public function AddMenu(){

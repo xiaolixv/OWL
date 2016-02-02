@@ -11,6 +11,12 @@ $(function() {
 //        cookie: 'dcjq-accordion-1',
         classExpand: 'dcjq-current-parent'
     });
+    $('.default-date-picker').datetimepicker({
+        format: 'yyyy-mm-dd',
+        autoclose:true,
+        language: 'zh-CN',
+        minView: "month"
+    });
 });
 
 var Script = function () {

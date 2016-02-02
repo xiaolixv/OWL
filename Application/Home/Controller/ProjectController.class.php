@@ -9,20 +9,13 @@
 namespace Home\Controller;
 use Think\Controller;
 
-class ProjectController extends Controller
+class ProjectController extends CommonController
 {
 
     public  function  projectlist()
     {
-        if ($_SESSION["user"]["name"] == "" || $_SESSION["user"]["name"] == null) {
-            //dump($_SESSION["user"]["name"]);
-            $this->redirect("Home/Login/login");
-        } else {
-            $this->projectCach=$_SESSION["user"]["id"]."projectCache";
-            layout('Layout/layout');
-            $this->display();
-
-        }
+        layout('Layout/layout');
+        $this->display();
     }
 
     public function SearchProject(){
@@ -45,4 +38,22 @@ class ProjectController extends Controller
         $Model->ownerid=$id;
         $Model->add();
     }
+
+    public function StoryList(){
+        layout('Layout/layout');
+        $this->display();
+    }
+
+    public function ScrumList(){
+        layout('Layout/layout');
+        $this->display();
+    }
+
+    public function AddScrum(){
+        $Model=D("Scrum");
+        $Model->create();
+        $Model->add();
+    }
+
+
 }
