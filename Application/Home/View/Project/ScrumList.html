@@ -5,18 +5,34 @@
                 <header class="panel-heading">
                     <label class="panel-title">查询条件</label>
                 </header>
-                <div class="row panel-body ">
-                    <div class="form-horizontal col-lg-7">
-                        <label class="col-lg-2 col-sm-2 control-label">名  称</label>
-                        <div class="col-lg-10">
-                            <input class="form-control form-control-inline input-medium default-date-picker"  size="16" type="text" value="" />
+                <div class="panel-body form-horizontal">
+                    <div class="row form-group">
+                        <div class="col-lg-6">
+                            <label class="col-lg-3 control-label text-right">名  称</label>
+                            <div class="col-lg-9">
+                                <select class="form-control" id="searchProjectName"></select>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <label class="col-lg-3 control-label text-right">开始时间</label>
+                            <div class="col-lg-9">
+                                <input class="form-control form-control-inline input-medium default-date-picker"  size="16" type="text" value="" />
+                            </div>
                         </div>
                     </div>
-                    <div class="col-lg-5">
-                        <button type="button" class="btn btn-primary " id="find" ><i class=" icon-search"></i>查  找</button>
-                        <button type="button" data-backdrop="static" data-toggle="modal" data-target="#myModal" class="btn btn-success "><i class=" icon-plus"></i> 新 增</button>
-                        <button type="button" class="btn btn-danger "><i class=" icon-remove"></i> 删 除</button>
-                        <button type="button" class="btn btn-info "><i class=" icon-user"></i> 设置人员</button>
+                    <div class="row form-group">
+                        <div class="col-lg-6">
+                            <label class="col-lg-3 control-label text-right">结束时间</label>
+                            <div class="col-lg-9">
+                                <input class="form-control form-control-inline input-medium default-date-picker"  size="16" type="text" value="" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row pull-right mt15">
+                            <button type="button" class="btn btn-primary " id="find" ><i class=" icon-search"></i>查  找</button>
+                            <button type="button" data-backdrop="static" data-toggle="modal" data-target="#myModal" class="btn btn-success "><i class=" icon-plus"></i> 新 增</button>
+                            <button type="button" class="btn btn-danger "><i class=" icon-remove"></i> 删 除</button>
+                            <button type="button" class="btn btn-info "><i class=" icon-user"></i> 设置人员</button>
                     </div>
                 </div>
             </section>
@@ -42,7 +58,7 @@
                                 <th class="text-center">结束时间</th>
                             </tr>
                             </thead>
-                            <tbody id="projecttable">
+                            <tbody id="scrumtable">
                             </tbody>
                         </table>
                     </section>
@@ -96,8 +112,9 @@
             <input type="checkbox" style="margin-top: 0px" value="">
         </td>
         <td class="hidden">${id}</td>
-        <td>${name}</td>
-        <td>${describe}</td>
+        <td>${projectName}</td>
+        <td>${startDate}</td>
+        <td>${endDate}</td>
     </tr>
 </script>
 <script type="text/javascript">
@@ -115,14 +132,16 @@
                     option+="<option value="+v.key+">"+v.value+"</option>"
                 });
                 $("#projectName").append(option);
+                $("#searchProjectName").append(option);
             }
         });
     });
 
     $("#submit").click(function(){
-        model.projectName=$("#projectName").val();
+        model.projectId=$("#projectName").val();
         model.startDate=$("#startDate").val();
         model.endDate=$("#endDate").val();
+        model.projectName=$("#projectName").find("option:selected").text();
         $.ajax({
             type: 'POST',
             dataType:'json',
@@ -141,11 +160,11 @@
         $.ajax({
             type:"GET",
             dataType:'json',
-            data:searchModel,
-            url:"./SearchProject",
+            //data:searchModel,
+            url:"./SearchScrum",
             success:function(data){
-                $("#projecttable").html("");
-                $('#grid').tmpl(data).appendTo('#projecttable');
+                $("#scrumtable").html("");
+                $('#grid').tmpl(data).appendTo('#scrumtable');
             }
         });
     });

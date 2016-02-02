@@ -55,5 +55,14 @@ class ProjectController extends CommonController
         $Model->add();
     }
 
+    public  function SearchScrum(){
+        $result=D("Scrum")->where()->select();
+        $r=array();
+        foreach($result as $id=>$value) {
+            array_push($r, $value);
+        }
+        $this->ajaxReturn($r,'JSON');
+    }
+
 
 }
