@@ -4615,3 +4615,11 @@ tr.odd.gradeX td.sorting_1, tr.even.gradeX td.sorting_1, table.display tr.even.g
 .ml10{
     margin-left: 10px !important;
 }
+
+.padding0{
+    padding: 0px !important;
+}
+
+.mgn5-btm{
+    margin-bottom: 5px;
+}

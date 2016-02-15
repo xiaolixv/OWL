@@ -29,6 +29,23 @@ class MenuController extends  Controller
         $this->ajaxReturn($id,'JSON');
     }
 
+    public function  DeleteMenu(){
+        $Model=D("Menu");
+       // echo("id=".I("post.id"));
+        $map["pId"]=I("post.id");
+        //$result=$Model->where($map)->select();
+        //if($result->length>0){
+        $Model->where($map)->delete();
+        echo($Model->getLastSql());
+        //}
+        $rmap["id"]=I("post.id");
+        //$r=$Model->where($rmap)->select();
+        $Model->where($rmap)->delete();
+
+        //$Model->where("id='".I("post.id")."''")->delete();
+        //echo($Model->sql());
+    }
+
     public function UpdateMenu(){
         $Model=D("Menu");
         $Model->Create();

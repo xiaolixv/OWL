@@ -71,7 +71,7 @@
         },
         callback:{
             beforeEditName:beforeEditName,
-
+            beforeRemove: beforeRemove
         },
         data: {
             simpleData: {
@@ -83,6 +83,30 @@
 
     var menuModel={};
     var parentNode={};
+
+    function beforeRemove(treeId, treeNode){
+        var flag=false; //treeNode.id
+        $.when(deleteNode(treeId, treeNode))
+        .done(function(){
+            return flag;
+        })
+    }
+
+    function deleteNode(treeId, treeNode){
+        var deferred= $.Deferred();
+        var data={};
+        data.id=treeNode.id;
+        $.ajax({
+            type: 'POST',
+            dataType:'json',
+            url: "__APP__/Home/Menu/DeleteMenu",
+            data: data,
+            success:function(data){
+                deferred.resolve();
+            }
+        });
+        return deferred;
+    }
 
     function removeHoverDom(treeId,treeNode){
         $("#addBtn_"+treeNode.tId).unbind().remove();
@@ -150,10 +174,12 @@
                 url: "__APP__/Home/Menu/AddMenu",
                 data: menuModel,
                 success:function(data){
-                    menuModel.id=data.id;
-                    var zTree = $.fn.zTree.getZTreeObj("treeDemo");
-                    zTree.addNodes(parentNode, menuModel);
-                    menuModel = {};
+                    if(!util.isNullOrEmpty(data)) {
+                        menuModel.id = data;
+                        var zTree = $.fn.zTree.getZTreeObj("treeDemo");
+                        zTree.addNodes(parentNode, menuModel);
+                        menuModel = {};
+                    }
                 }
             });
 
@@ -174,9 +200,11 @@
                 url: "__APP__/Home/Menu/UpdateMenu",
                 data: m,
                 success:function(data){
-                    var zTree = $.fn.zTree.getZTreeObj("treeDemo");
-                    zTree.refresh();
-                    menuModel = {};
+                    if(data==null) {
+                        var zTree = $.fn.zTree.getZTreeObj("treeDemo");
+                        zTree.refresh();
+                        menuModel = {};
+                    }
                 }
             });
         }
